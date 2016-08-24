@@ -356,6 +356,10 @@ module Hatchet
       [:@context]
     end
 
+    def silence(temp_level=nil)
+      yield self
+    end
+
     private
 
     # Private: Adds a message to each appender at the specified level.
