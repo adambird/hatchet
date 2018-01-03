@@ -274,6 +274,9 @@ module Hatchet
       @configuration.default_level
     end
 
+    # Sass gem expects #log_level
+    alias_method :log_level, :level
+
     # Public: Set the lowest level of message to log by default.
     #
     # level - The lowest level of message to log by default.
@@ -293,6 +296,9 @@ module Hatchet
 
       @configuration.level level
     end
+
+    # Sass gem expects #log_level=
+    alias_method :log_level=, :level=
 
     # Public: Returns nil, exists for greater compatibility with things
     # expecting a standard Logger.
